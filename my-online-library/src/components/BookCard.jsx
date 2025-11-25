@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import placeholder from '../assets/placeholder-book.jpg'
 import '../styles/BookCard.css'
+import OptimizedImage from '../components/OptimizedImage'
+
 
 function Stars({ value }) {
   const v = Math.max(0, Math.min(5, Math.round((value || 0) * 2) / 2))
@@ -26,7 +28,7 @@ export default function BookCard({ book }) {
   return (
     <article className="card h-100 border-0 modern-card">
       <div className="ratio ratio-4x3 card-media">
-        <img src={imgSrc} alt={book.title} className="object-cover" loading="lazy" />
+        <OptimizedImage src={imgSrc} alt={book.title} className="..." />
       </div>
 
       <div className="card-body d-flex flex-column">

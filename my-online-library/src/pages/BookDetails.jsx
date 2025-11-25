@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import placeholder from '../assets/placeholder-book.jpg'
 import '../styles/BookDetails.css'
+import OptimizedImage from '../components/OptimizedImage'
 
 function Stars({ value }) {
   const v = Math.max(0, Math.min(5, Number(value) || 0))
@@ -45,7 +46,7 @@ export default function BookDetails() {
       <div className="bd-wrapper row g-4">
         <div className="col-lg-4">
           <div className="bd-cover-card shadow-sm">
-            <img src={img} alt={book.title} className="bd-cover-img" loading="lazy" />
+            <OptimizedImage src={img} alt={book.title} className="..." />
             <div className="bd-cover-footer d-flex justify-content-between align-items-center p-3">
               <div>
                 <div className="bd-price">Free</div>
