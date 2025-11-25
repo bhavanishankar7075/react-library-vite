@@ -1,47 +1,73 @@
-/* src/index.css */
+:root{
+  --brand-dark: #0b1221;
+  --brand-gradient-start: #0f1724;
+  --brand-gradient-end: #2b3646;
+  --card-radius: 12px;
+}
+
+/* body */
 body {
-  background: #f8f9fa;
+  background: #f4f6f8;
+  color: #1f2937;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
-/* limit container width so layout centers better on wide screens */
-.container {
-  max-width: 1100px;
+/* sticky navbar gradient */
+.bg-gradient-dark {
+  background: linear-gradient(90deg, var(--brand-gradient-start), var(--brand-gradient-end)) !important;
 }
 
-/* jumbotron look */
-.jumbotron {
-  background: #f7f7f9;
-  border-radius: 8px;
+/* brand logo */
+.brand-logo {
+  font-size: 1.25rem;
+}
+
+/* hero */
+.hero {
+  background: linear-gradient(180deg, rgba(11,18,33,0.85), rgba(11,18,33,0.75));
+  color: #fff;
   padding: 2rem;
-  margin-bottom: 1.5rem;
+  box-shadow: 0 6px 20px rgba(11,18,33,0.08);
 }
 
-/* book card image sizing & cover */
-.card-book-img {
-  object-fit: cover;
-  height: 180px;
-  width: 100%;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
+/* container width */
+.container {
+  max-width: 1150px;
 }
 
-/* card shadow and consistent height across cards */
+/* card and image */
 .card {
-  border-radius: 0.5rem;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+}
+.card .object-cover {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
-/* make navbar stuck to top and not too tall */
-.navbar {
-  padding-top: 0.45rem;
-  padding-bottom: 0.45rem;
+/* ratio helper to keep consistent image area */
+.ratio-4x3 { aspect-ratio: 4 / 3; }
+
+/* subtle hover */
+.card:hover {
+  transform: translateY(-4px);
+  transition: transform 180ms ease;
 }
 
-/* small responsive fixes */
-@media (max-width: 576px) {
-  .card-book-img {
-    height: 160px;
-  }
-  .jumbotron {
-    padding: 1rem;
-  }
+/* buttons */
+.btn-primary {
+  background: linear-gradient(180deg,#0069ff,#0051d4);
+  border: none;
+  box-shadow: 0 6px 18px rgba(0,81,212,0.12);
+}
+.btn-success { background: #1db954; border: none; }
+
+/* form spacing */
+.form-label { font-weight: 600; font-size: .95rem; }
+
+/* responsive tweaks */
+@media (max-width: 768px) {
+  .hero { padding: 1.25rem; text-align: left; }
+  .brand-logo { font-size: 1rem; }
 }
