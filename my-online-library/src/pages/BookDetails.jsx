@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import placeholder from '../assets/placeholder-book.jpg'
+import '../styles/BookDetails.css'
 
 export default function BookDetails() {
   const { id } = useParams()

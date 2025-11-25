@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addBook } from '../store/booksSlice'
 import { useNavigate } from 'react-router-dom'
+import '../styles/AddBook.css'
 
 export default function AddBook() {
   const dispatch = useDispatch()

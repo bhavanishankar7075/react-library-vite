@@ -1,0 +1,5 @@
+/* BrowseBooks.css */
+.search-row { display:flex; gap:12px; align-items:center; }
+.search-row .form-control { min-width: 260px; }
+
+.alert-info { background: linear-gradient(90deg,#f0f7ff,#f7fbff); border: 1px solid rgba(37,99,235,0.06); color: #0758c2; }

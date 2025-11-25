@@ -1,0 +1,38 @@
+/* Header.css */
+.header-light {
+  background: #ffffff;
+  border-bottom: 1px solid rgba(11,20,40,0.04);
+  padding: 0.4rem 0;
+}
+.header-light .brand-name { color: #0b1221; }
+.header-light .brand-logo { font-size: 1.2rem; }
+
+.header-light .header-link {
+  color: #0b1221;
+  padding: 10px 14px;
+  border-radius: 10px;
+  transition: background 140ms ease, transform 140ms ease, color 140ms;
+  font-weight: 600;
+}
+.header-light .header-link:hover {
+  background: rgba(11,20,40,0.04);
+  color: #000;
+  transform: translateY(-2px);
+}
+.header-light .active-link {
+  background: rgba(11,20,40,0.06);
+  box-shadow: 0 8px 24px rgba(2,6,23,0.06);
+}
+.header-light .add-btn {
+  background: #0b1221;
+  color: #fff;
+  border-radius: 10px;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+.header-light .add-btn:hover { opacity: 0.95; transform: translateY(-2px); }
+
+@media (max-width: 575px) {
+  .header-light .brand-name { font-size: 0.95rem; }
+  .header-light .add-btn { padding: 5px 10px; }
+}

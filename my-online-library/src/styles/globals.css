@@ -1,0 +1,21 @@
+/* globals.css - base utilities */
+:root{
+  --brand-dark: #0b1221;
+  --muted: #6b7280;
+  --bg-soft: #f4f6f8;
+}
+
+body {
+  background: var(--bg-soft);
+  color: #111827;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container { max-width: 1150px; }
+
+/* small common helpers */
+.d-block-center { display:block; margin-left:auto; margin-right:auto; }
+.gap-2 { gap: .5rem; }
+.rounded-3 { border-radius: 12px; }

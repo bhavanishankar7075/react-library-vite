@@ -1,0 +1,7 @@
+/* AddBook.css */
+.card.shadow-sm { border-radius: 12px; border: 1px solid rgba(11,20,40,0.04); }
+.form-label { font-weight: 600; }
+.invalid-feedback { font-size: 0.9rem; }
+
+/* action buttons */
+.card .btn { border-radius: 10px; }

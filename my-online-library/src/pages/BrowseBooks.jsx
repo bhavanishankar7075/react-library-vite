@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { Link, useParams, useSearchParams } from 'react-router-dom'
 import BookCard from '../components/BookCard'
+import '../styles/BrowseBooks.css'
 
 export default function BrowseBooks() {
   const { category } = useParams()

@@ -1,73 +1,83 @@
-:root{
-  --brand-dark: #0b1221;
-  --brand-gradient-start: #0f1724;
-  --brand-gradient-end: #2b3646;
-  --card-radius: 12px;
+/* Header (light background, black links) */
+.header-light {
+  background: #ffffff;
+  border-bottom: 1px solid rgba(11,20,40,0.04);
+}
+.header-light .brand-name { color: #0b1221; }
+.header-light .header-link {
+  color: #0b1221;
+  padding: 10px 14px;
+  border-radius: 10px;
+  transition: background 140ms ease, transform 140ms ease, color 140ms;
+  font-weight: 600;
+}
+.header-light .header-link:hover { background: rgba(11,20,40,0.04); color: #000; transform: translateY(-2px); }
+.header-light .active-link {
+  background: rgba(11,20,40,0.06);
+  box-shadow: 0 8px 24px rgba(2,6,23,0.06);
 }
 
-/* body */
-body {
-  background: #f4f6f8;
-  color: #1f2937;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-}
-
-/* sticky navbar gradient */
-.bg-gradient-dark {
-  background: linear-gradient(90deg, var(--brand-gradient-start), var(--brand-gradient-end)) !important;
-}
-
-/* brand logo */
-.brand-logo {
-  font-size: 1.25rem;
-}
-
-/* hero */
-.hero {
-  background: linear-gradient(180deg, rgba(11,18,33,0.85), rgba(11,18,33,0.75));
+/* Add button in header */
+.header-light .add-btn {
+  background: #0b1221;
   color: #fff;
-  padding: 2rem;
-  box-shadow: 0 6px 20px rgba(11,18,33,0.08);
+  border-radius: 10px;
+  padding: 6px 12px;
+  text-decoration: none;
 }
+.header-light .add-btn:hover { opacity: 0.95; transform: translateY(-2px); }
 
-/* container width */
-.container {
-  max-width: 1150px;
+/* Hero right box (Top Categories) */
+.home-hero { background: transparent; padding: 1.75rem; }
+.hero-left { max-width: 760px; }
+.hero-title { font-size: 2.25rem; color: #071133; font-weight: 800; }
+.hero-sub { color: #4b5563; }
+
+.hero-right .hero-top-box {
+  background: linear-gradient(180deg, rgba(255,255,255,0.98), #fff);
+  border: 1px solid rgba(11,20,40,0.04);
+  border-radius: 12px;
+  min-width: 220px;
 }
-
-/* card and image */
-.card {
-  border-radius: var(--card-radius);
-  overflow: hidden;
+.hero-list-title { font-weight: 700; color: #0b1221; margin-bottom: 8px; }
+.hero-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.hero-list-link {
+  color: #0b1221;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-weight: 600;
 }
-.card .object-cover {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+.hero-list-link:hover { background: rgba(11,20,40,0.04); transform: translateX(4px); }
+
+/* Make the "View all" button in hero stand out */
+.btn-outline-muted {
+  background: transparent;
+  border: 1px solid rgba(11,20,40,0.06);
+  color: #374151;
+  padding: .35rem .7rem;
+  border-radius: 8px;
 }
+.btn-outline-muted:hover { background: rgba(11,20,40,0.03); }
 
-/* ratio helper to keep consistent image area */
-.ratio-4x3 { aspect-ratio: 4 / 3; }
-
-/* subtle hover */
-.card:hover {
-  transform: translateY(-4px);
-  transition: transform 180ms ease;
+/* Category chips */
+.category-chip {
+  display:inline-block;
+  padding:8px 12px;
+  border-radius:999px;
+  background: linear-gradient(90deg, rgba(124,58,237,0.06), rgba(37,99,235,0.04));
+  color:#0b1221;
+  border: 1px solid rgba(11,20,40,0.03);
+  text-decoration:none;
+  font-weight:600;
+  transition: transform 140ms, box-shadow 140ms;
 }
+.category-chip:hover { transform: translateY(-4px); box-shadow: 0 14px 40px rgba(11,20,40,0.06); }
 
-/* buttons */
-.btn-primary {
-  background: linear-gradient(180deg,#0069ff,#0051d4);
-  border: none;
-  box-shadow: 0 6px 18px rgba(0,81,212,0.12);
-}
-.btn-success { background: #1db954; border: none; }
-
-/* form spacing */
-.form-label { font-weight: 600; font-size: .95rem; }
-
-/* responsive tweaks */
-@media (max-width: 768px) {
-  .hero { padding: 1.25rem; text-align: left; }
-  .brand-logo { font-size: 1rem; }
+/* small screens adjustments */
+@media (max-width: 767px) {
+  .hero-right { width: 100%; text-align:left; }
+  .hero-top-box { width: 100%; }
+  .hero-title { font-size: 1.65rem; }
+  .header-light .brand-logo { font-size: 1.05rem; }
 }
