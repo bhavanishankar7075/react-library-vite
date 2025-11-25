@@ -53,8 +53,6 @@ export default function BookDetails() {
                 <div className="bd-small text-muted">Instant access</div>
               </div>
               <div className="bd-actions d-flex gap-2">
-                <button className="btn btn-sm btn-action">Borrow</button>
-                <button className="btn btn-sm btn-outline-secondary">Favorite</button>
               </div>
             </div>
           </div>
@@ -78,13 +76,10 @@ export default function BookDetails() {
               <p className="text-muted mb-0" style={{ whiteSpace: 'pre-line' }}>{book.description}</p>
             </div>
 
-            <div className="mt-4 d-flex gap-2">
-              <Link to="/books" className="btn btn-outline-muted">View all books</Link>
-              <button className="btn btn-primary">Download PDF</button>
+
             </div>
           </div>
         </div>
       </div>
-    </div>
   )
 }

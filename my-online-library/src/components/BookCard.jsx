@@ -40,7 +40,6 @@ export default function BookCard({ book }) {
 
         <div className="mt-auto d-flex gap-2 align-items-center">
           <Link to={`/book/${book.id}`} className="btn btn-sm btn-view">View</Link>
-          <button type="button" className="btn btn-sm btn-action">Buy</button>
           <div className="ms-auto text-muted small">{book.category}</div>
         </div>
       </div>
